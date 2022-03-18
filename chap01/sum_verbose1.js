@@ -7,9 +7,9 @@ let sum = 0;
 
 for (let i = a; i <= b; i++) {
     if (i < b) {
-        console.log(`${i} + `, );
+        process.stdout.write(`${i} + `); // 한줄로 길게 출력
     } else {
-        console.log(`${i} = `, );
+        process.stdout.write(`${i} + `); // 한줄로 길게 출력
     }
     sum += i;
 }
