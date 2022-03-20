@@ -1,3 +1,5 @@
+console.log("배열 데이터의 인덱스 값마다 최댓값을 뽑아냅니다.");
+
 const scanMax = (a, b, c) => {
     let max = a;
 

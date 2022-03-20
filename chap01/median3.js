@@ -1,3 +1,5 @@
+console.log("세 개의 입력값 중 중앙값을 뽑아냅니다.");
+
 const readlineSync = require("readline-sync");
 
 const a = Number(readlineSync.question("input inteager a : "));
