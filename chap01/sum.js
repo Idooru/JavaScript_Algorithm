@@ -2,13 +2,18 @@ console.log("두 입력값 사이의 합을 구합니다.");
 
 const readlineSync = require("readline-sync");
 const range = require("../modules/range");
+const sort = require("../modules/sort");
 
-const a = Number(readlineSync.question("input number a : "));
-const b = Number(readlineSync.question("input number b : "));
+let a = Number(readlineSync.question("input number a : "));
+let b = Number(readlineSync.question("input number b : "));
+
+if (a > b) {
+    [a, b] = sort.ascending(a, b);
+}
 
 let sum = 0;
 
-for (let i of range.default(a, b)) {
+for (let i of range.default(a, b + 1)) {
     sum += i;
 }
 

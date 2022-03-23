@@ -19,10 +19,10 @@ exports.zeroStart = (until) => {
 };
 
 exports.formula = (formula) => {
-    const Int = parseInt(formula);
+    const int = parseInt(formula);
     const arr = [];
 
-    for (let i = 0; i < Int; i++) {
+    for (let i = 0; i < int; i++) {
         arr.push(i);
     }
 

@@ -2,17 +2,22 @@ console.log("두 입력값 사이의 합을 구하는 과정을 출력합니다.
 
 const readlineSync = require("readline-sync");
 const range = require("../modules/range");
+const sort = require("../modules/sort");
 
-const a = Number(readlineSync.question("input inteager a : "));
-const b = Number(readlineSync.question("input inteager b : "));
+let a = Number(readlineSync.question("input inteager a : "));
+let b = Number(readlineSync.question("input inteager b : "));
+
+if (a > b) {
+    [a, b] = sort.ascending(a, b);
+}
 
 let sum = 0;
 
-for (let i of range.default(a, b)) {
+for (let i of range.default(a, b + 1)) {
     if (i < b) {
         process.stdout.write(`${i} + `); // 한줄로 길게 출력
     } else {
-        process.stdout.write(`${i} + `); // 한줄로 길게 출력
+        process.stdout.write(`${i} = `); // 한줄로 길게 출력
     }
     sum += i;
 }
