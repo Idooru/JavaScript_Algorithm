@@ -8,7 +8,10 @@ let a = Number(input.question("input inteager a : "));
 let b = Number(input.question("input inteager b : "));
 
 if (a > b) {
-    [a, b] = sort.ascending(a, b);
+    let temp = null;
+    temp = a;
+    a = b;
+    b = temp;
 }
 
 let sum = 0;
