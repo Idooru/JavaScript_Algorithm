@@ -1,12 +1,12 @@
-const readlineSync = require("readline-sync");
+const input = require("readline-sync");
 const range = require("../modules/range");
 
-const n = Number(readlineSync.question("input students's number : "));
+const n = Number(input.question("input students's number : "));
 const students = [];
 let total = 0;
 
 for (let i of range.zeroStart(n)) {
-    const score = Number(readlineSync.question(`input student(${i + 1})'s score : `));
+    const score = Number(input.question(`input student(${i + 1})'s score : `));
     students.push(score);
 
     total += students[i];

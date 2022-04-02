@@ -1,8 +1,8 @@
 console.log("1부터 n까지의 합을 while 반복문으로 구합니다.");
 
-const readlineSync = require("readline-sync");
+const input = require("readline-sync");
 
-const n = Number(readlineSync.question("input inteager n : "));
+const n = Number(input.question("input inteager n : "));
 
 let sum = 0;
 let i = 1;

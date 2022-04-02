@@ -1,13 +1,13 @@
-const readlineSync = require("readline-sync");
+const input = require("readline-sync");
 const range = require("../modules/range");
 const sort = require("../modules/sort");
 
-const num = Number(readlineSync.question("input inteager number : "));
+const num = Number(input.question("input inteager number : "));
 const arr = [];
 let x;
 
 for (let i of range.zeroStart(num)) {
-    x = Number(readlineSync.question(`x[${i}] = `));
+    x = Number(input.question(`x[${i}] = `));
     arr.push(x);
 }
 

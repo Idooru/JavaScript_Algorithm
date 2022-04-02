@@ -1,5 +1,5 @@
-const readlineSync = require("readline-sync");
+const input = require("readline-sync");
 
-const a = readlineSync.question("input inteager a : ");
+const a = input.question("input inteager a : ");
 
 console.log(a);

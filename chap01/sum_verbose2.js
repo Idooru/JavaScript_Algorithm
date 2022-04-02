@@ -1,11 +1,11 @@
 console.log("두 입력값 사이의 합을 구하는 과정을 출력합니다.");
 
-const readlineSync = require("readline-sync");
+const input = require("readline-sync");
 const range = require("../modules/range");
 const sort = require("../modules/sort");
 
-let a = Number(readlineSync.question("input inteager a : "));
-let b = Number(readlineSync.question("input inteager b : "));
+let a = Number(input.question("input inteager a : "));
+let b = Number(input.question("input inteager b : "));
 
 if (a > b) {
     [a, b] = sort.ascending(a, b);
