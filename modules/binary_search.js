@@ -10,11 +10,11 @@ module.exports = (array, target) => {
             return center;
         }
 
-        if (center < target) {
+        if (guess < target) {
             low = center + 1;
         }
 
-        if (center > target) {
+        if (guess > target) {
             high = center - 1;
         }
     }
