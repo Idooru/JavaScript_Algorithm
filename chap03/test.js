@@ -1,55 +1,26 @@
-// function makePair(a, b) {
-//     return function (f) {
-//         return f(a, b);
-//     };
-// }
+function binary_search(arr, target) {
+    let low = 0;
+    let high = arr.length - 1;
 
-// function fst(p) {
-//     return p(function (a, b) {
-//         return a;
-//     });
-// }
+    while (low <= high) {
+        let mid = parseInt((low + high) / 2);
+        let guess = arr[mid];
 
-// function snd(p) {
-//     return p(function (a, b) {
-//         return b;
-//     });
-// }
+        if (guess === target) return mid;
+        else if (guess < target) low = mid + 1;
+        else if (guess > target) high = mid - 1;
+    }
 
-// let p = makePair(1, "abc");
+    return -1;
+}
 
-// console.log(fst(p));
-// console.log(snd(p));
+const target = 67;
+const arr = [12, 23, 34, 45, 56];
 
-// const input = require("readline-sync");
+const idx = binary_search(arr, target);
 
-// a = Number(input.question("input a : "));
-// b = Number(input.question("input b : "));
-
-// if (a > b) {
-//     let temp;
-//     temp = a;
-//     a = b;
-//     b = temp;
-// }
-
-// let sum = 0;
-
-// for (let i = a; i <= b; i++) {
-//     sum += i;
-// }
-
-// console.log(`${a} 부터 ${b} 까지의 합은 `, sum);
-
-const input = require("readline-sync");
-const range = require("../modules/range");
-
-const a = Number(input.question("input inteager a : "));
-const b = Number(input.question("input inteager b : "));
-
-if (a > b) {
-    let temp;
-    temp = a;
-    a = b;
-    b = temp;
+if (idx == -1) {
+    console.log(false);
+} else {
+    console.log(`찾으려는 값(${target})이 x[${idx}]에 존재합니다.`);
 }

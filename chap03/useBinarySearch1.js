@@ -11,6 +11,7 @@ for (let i of range.default(1, num)) {
     while (true) {
         x[i] = Number(input.question(`input inteager x[${i}] : `));
         if (x[i] > x[i - 1]) break;
+        else console.log("현재 입력값이 이전 입력값 보다 작거나 같으면 안됩니다!");
     }
 }
 
