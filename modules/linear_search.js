@@ -1,15 +1,15 @@
 module.exports = (array, target) => {
-    let i = 0;
+    const sentinal = Array.from(array); // 보초법 사용
+    sentinal.push(target);
 
-    while (i < array.length) {
-        if (array[i] === target) {
+    let i = 0;
+    while (true) {
+        if (sentinal[i] === target) {
             break;
         }
         i++;
     }
 
-    if (i === array.length) {
-        return false;
-    }
+    if (i === array.length) return false;
     return i;
 };
