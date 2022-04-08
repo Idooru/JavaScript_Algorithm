@@ -3,7 +3,7 @@ const hashedArr = [];
 const hashTable = [];
 const hashKey = 13;
 
-console.log(`기존 배열: [${existArr}]`);
+console.log(`기존 배열: [${existArr.join(", ", " ")}]`);
 
 for (let i in existArr) {
     hashedArr[i] = null;
@@ -19,7 +19,7 @@ while (i < hashedArr.length) {
     }
 }
 
-console.log(`해시화한 배열: [${hashedArr}]`);
+console.log(`해시화한 배열: [${hashedArr.join(", ", " ")}]`);
 
 i = 0;
 while (i < hashedArr.length) {
@@ -30,4 +30,4 @@ while (i < hashedArr.length) {
     }
 }
 
-console.log(`해시테이블: [${hashTable}]`);
+console.log(`해시테이블: [${hashTable.join(", ", " ")}]`);
